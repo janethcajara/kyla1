@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: #2d89ef; color: white; padding: 20px; text-align: center; }
+        .content { padding: 20px; background: #f9f9f9; }
+        .button { display: inline-block; padding: 10px 20px; background: #2d89ef; color: white; text-decoration: none; border-radius: 5px; }
+        .footer { text-align: center; padding: 20px; font-size: 12px; color: #666; }
+        .alert { background: #ffebee; color: #c62828; padding: 15px; border-radius: 5px; margin: 15px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Account Activity Alert</h1>
+        </div>
+        <div class="content">
+            <p>Dear {{name}},</p>
+            <div class="alert">
+                <p>We detected a {{activity_type}} on your JobPortal account:</p>
+                <p><strong>Time:</strong> {{timestamp}}<br>
+                <strong>Location:</strong> {{location}}<br>
+                <strong>Device:</strong> {{device}}</p>
+            </div>
+            <p>If this wasn't you, please secure your account immediately:</p>
+            <p><a href="{{security_url}}" class="button">Secure Your Account</a></p>
+            <p>If this was you, you can safely ignore this message.</p>
+        </div>
+        <div class="footer">
+            <p>This is an automated security alert. Please do not reply to this email.</p>
+            <p>&copy; JobPortal</p>
+        </div>
+    </div>
+</body>
+</html>

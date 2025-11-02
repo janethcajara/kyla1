@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: #2d89ef; color: white; padding: 20px; text-align: center; }
+        .content { padding: 20px; background: #f9f9f9; }
+        .button { display: inline-block; padding: 10px 20px; background: #2d89ef; color: white; text-decoration: none; border-radius: 5px; }
+        .footer { text-align: center; padding: 20px; font-size: 12px; color: #666; }
+        .details { background: #fff; padding: 15px; border-left: 4px solid #2d89ef; margin: 15px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>New Application Received</h1>
+        </div>
+        <div class="content">
+            <p>A new application has been submitted:</p>
+            <div class="details">
+                <p><strong>Position:</strong> {{job_title}}</p>
+                <p><strong>Applicant:</strong> {{applicant_name}}</p>
+                <p><strong>Email:</strong> {{applicant_email}}</p>
+                <p><strong>Applied:</strong> {{applied_date}}</p>
+            </div>
+            <p><a href="{{admin_url}}" class="button">Review Application</a></p>
+        </div>
+        <div class="footer">
+            <p>JobPortal Admin Notification</p>
+            <p>&copy; JobPortal</p>
+        </div>
+    </div>
+</body>
+</html>

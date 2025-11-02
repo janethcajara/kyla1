@@ -1,0 +1,88 @@
+:root{
+	--bg:#f8f9fb;
+	--surface:#ffffff;
+	--primary:#0d6efd; /* bootstrap primary */
+	--accent:#2d89ef;
+	--muted:#6c757d;
+	--text:#212529;
+	--radius:8px;
+}
+
+/* Base reset and layout */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+	font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background:var(--bg);
+	color:var(--text);
+	margin:0;
+	line-height:1.45;
+}
+
+/* Keep Bootstrap's container but provide a comfortable page wrapper */
+.container{max-width:1100px}
+
+/* Header & nav tweaks (works with Bootstrap classes) */
+.navbar-brand{font-weight:600;letter-spacing:0.2px}
+
+/* Job listing card */
+.job, article.job{
+	background:var(--surface);
+	border-radius:var(--radius);
+	padding:1rem;
+	margin:0.8rem 0;
+	box-shadow:0 1px 4px rgba(16,24,40,0.03), 0 1px 2px rgba(16,24,40,0.05);
+	border:1px solid rgba(16,24,40,0.04);
+}
+.job .title{font-size:1.05rem;font-weight:600;margin-bottom:0.25rem}
+.job .meta{color:var(--muted);font-size:.9rem}
+
+/* Forms and controls */
+label{display:block;margin:6px 0;font-weight:500}
+.form-control, input[type="text"], input[type="email"], textarea, select{
+	border-radius:6px;
+	border:1px solid rgba(16,24,40,0.08);
+	padding:.5rem .6rem;
+	background:#fff;
+}
+textarea{min-height:120px}
+
+/* Buttons - complement Bootstrap colors */
+.btn-primary-custom, button.primary{
+	background:var(--accent);
+	color:#fff;
+	border:none;
+	padding:.45rem .85rem;
+	border-radius:6px;
+	cursor:pointer;
+}
+.btn-primary-custom:hover{filter:brightness(.95)}
+
+/* Utility info box */
+p.info{background:#e7f7e7;padding:10px;border:1px solid #bfeec0;border-radius:6px}
+
+/* Tables */
+.table-custom{width:100%;border-collapse:collapse;background:var(--surface);border-radius:6px;overflow:hidden}
+.table-custom th,.table-custom td{padding:.6rem .75rem;border-bottom:1px solid rgba(16,24,40,0.04)}
+.table-custom thead th{background:var(--bg);font-weight:600;text-align:left}
+
+/* Responsive job grid */
+.jobs-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:1rem}
+@media(min-width:720px){.jobs-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.jobs-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* Footer */
+footer{margin-top:2rem;text-align:center;color:var(--muted);padding:1.25rem 0}
+
+/* Small helpers */
+.muted{color:var(--muted)}
+.text-center{text-align:center}
+.mb-1{margin-bottom:.5rem}
+.mb-2{margin-bottom:1rem}
+.hidden{display:none}
+
+/* Accessible focus outline */
+:focus{outline:3px solid rgba(13,110,253,0.12);outline-offset:2px}
+
+/* Keep older rules as gentle fallbacks */
+nav a{margin-right:1rem}

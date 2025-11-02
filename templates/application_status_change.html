@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: #2d89ef; color: white; padding: 20px; text-align: center; }
+        .content { padding: 20px; background: #f9f9f9; }
+        .button { display: inline-block; padding: 10px 20px; background: #2d89ef; color: white; text-decoration: none; border-radius: 5px; }
+        .footer { text-align: center; padding: 20px; font-size: 12px; color: #666; }
+        .status { padding: 5px 10px; border-radius: 3px; }
+        .status-approved { background: #28a745; color: white; }
+        .status-rejected { background: #dc3545; color: white; }
+        .status-pending { background: #ffd700; color: black; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Application Status Update</h1>
+        </div>
+        <div class="content">
+            <p>Dear {{name}},</p>
+            <p>Your application for the position of <strong>{{job_title}}</strong> has been updated.</p>
+            <p>Current status: <span class="status status-{{status}}">{{status}}</span></p>
+            {{#if status_approved}}
+            <p>Congratulations! We will contact you shortly to schedule an interview.</p>
+            {{/if}}
+            <p><a href="{{portal_url}}" class="button">View Details</a></p>
+        </div>
+        <div class="footer">
+            <p>This is an automated message. Please do not reply to this email.</p>
+            <p>&copy; JobPortal</p>
+        </div>
+    </div>
+</body>
+</html>
